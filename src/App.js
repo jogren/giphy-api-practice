@@ -30,8 +30,8 @@ class App extends Component {
   }
 
   render() {
-    let imagesList = this.state.images.map(imageUrl => {
-      return <img src={imageUrl} />
+    let imagesList = this.state.images.map((imageUrl, index) => {
+      return <img src={imageUrl} key={index} alt="img"/>
     })
     return (
       <main className="App">
